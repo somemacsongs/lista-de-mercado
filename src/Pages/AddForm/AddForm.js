@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom"
 
 
-export function List () {
+export default function List () {
     const navigate = useNavigate();
     const [form, setForm] = useState({
         name: "",

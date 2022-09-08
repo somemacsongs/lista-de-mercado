@@ -1,4 +1,5 @@
 import { Card, Col, Button } from 'antd';
+import {Link} from "react-router-dom";
 
 
 
@@ -15,7 +16,9 @@ export default function FoodBox (prop){
             <p>
               <b>Total Calories: {prop.food.calories * prop.food.servings} </b> kcal
             </p>
-            <Button type="primary"> Delete </Button>
+            <Link to={`/${prop.food._id}`}>
+              <Button type="primary"> Saiba mais </Button>
+            </Link>
           </Card>
         </Col>
       );
