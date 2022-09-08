@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
+import style from "./Home.module.css";
 
-import FoodBox from "../FoodBox/FoodBox";
+import FoodBox from "../../Components/FoodBox/FoodBox";
 
 function Home() {
   const [foods, setFoods] = useState([]);
@@ -23,7 +25,13 @@ function Home() {
 
   return (
     <>
-        {foods.map((current) => {return <FoodBox food={current} />})}
+        <Link to="/create-food">
+            <button>Adicione uma comida!</button>
+        </Link>
+        <div className={style.grid}>
+           {foods.map((current) => {return <FoodBox food={current} />})}
+        </div>
+        
     </>
   )
 
