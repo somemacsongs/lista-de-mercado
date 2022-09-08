@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 import FoodBox from "../FoodBox/FoodBox";
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
 
   return (
     <>
-        {foods.map((current) => {<FoodBox food={current} />})}
+        {foods.map((current) => {return <FoodBox food={current} />})}
     </>
   )
 
